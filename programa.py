@@ -1,3 +1,4 @@
+from hashlib import sha1
 MAX_KEY_SIZE = 26
 
 def getMode():
