@@ -2,22 +2,21 @@ MAX_KEY_SIZE = 26
 
 def getMode():
     while True:
-        print("Deseja encriptar ou descriptar a messagem?")
-        mode = input().lower()
+        mode = input("Encriptar ou descriptar a messagem?").lower()
         if mode in 'encrypt e decrypt d'.split():
             return mode
         else:
-            print('Enter either "encrypt" or "e" or "decrypt" or "d".')
+            print('Digite encriptar ou descriptar.')
 
 
 def getMessage():
-    print('Enter your message:')
+    print('Digite sua mensagem:')
     return input()
 
 def getKey():
     key = 0
     while True:
-        print('Enter the key number (1-%s)' % (MAX_KEY_SIZE))
+        print('Digite a chave do codigo: ')
         key = int(input())
         if (key >= 1 and key <= MAX_KEY_SIZE):
             return key

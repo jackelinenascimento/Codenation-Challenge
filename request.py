@@ -1,10 +1,9 @@
 import json
 import requests
 
-url = ''
+url = "https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=e4f4565c38c25a5e4b1e06e13463422156208553"
 
 answer = {'answer': open('answer.json', 'rb')}
-
-submit = requests.post('https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=39f5292cbc6779850aff60de8066b92ed244ecd1', files=answer)
-
-print(submit.status_code)
+response = requests.post(url=url, files=answer)
+print(response.status_code)
+print(response.json())
