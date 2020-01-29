@@ -52,5 +52,5 @@ mode = getMode()
 message = getMessage()
 key = getKey()
 
-print('Your translated text is:')
+print('A traducao da sua mensagem e:')
 print(getTranslatedMessage(mode, message, key))
